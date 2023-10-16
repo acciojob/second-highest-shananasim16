@@ -9,8 +9,16 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+			// Check for edge cases
+			if (arr.length < 2 || new Set(arr).size === 1) {
+				return -Infinity;
+			}
+
+			// Sort the array in descending order
+			arr.sort((a, b) => b - a);
+
+			// Return the second element
+			return arr[1];
 		}
 
 		function Main() {
@@ -25,7 +33,7 @@
 	</script>
 
     <script type="text/javascript" src="./script.js">
-</script>
+    </script>
 
 </body>
 
